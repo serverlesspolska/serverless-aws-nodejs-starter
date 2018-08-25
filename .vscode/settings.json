@@ -1,0 +1,11 @@
+{
+"javascript.suggestionActions.enabled": false,
+"spellright.language": "",
+"spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "javascript"
+],
+"editor.tabSize": 2
+}

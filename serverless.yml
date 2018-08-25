@@ -1,0 +1,38 @@
+service: serverless-aws-nodejs-starter
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs8.10
+  profile: ${self:custom.myProfile.${self:custom.myStage}}
+  region: ${self:custom.myRegion.${self:custom.myStage}}
+
+custom:
+  myStage: ${opt:stage, self:provider.stage}
+  myProfile:
+    dev: default
+    prod: default
+  myRegion:
+    dev: eu-central-1
+    prod: us-east-1
+
+functions:
+  sampleOne:
+    handler: src/sampleOne/fnSampleOne.main
+    description: Function One description
+    memorySize: 128
+    timeout: 5
+    environment:
+      FOO: BAR
+  sampleTwo:
+    handler: src/sampleTwo/fnSampleTwo.main
+    description: Function One description
+    memorySize: 666
+    timeout: 7
+    environment:
+      MSG: Hello World!
+    events:
+      - http:
+          path: sample/two
+          method: get
+          cors: true
