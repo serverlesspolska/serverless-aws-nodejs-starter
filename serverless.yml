@@ -26,7 +26,7 @@ functions:
       FOO: BAR
   sampleTwo:
     handler: src/sampleTwo/fnSampleTwo.main
-    description: Function One description
+    description: Function Two description
     memorySize: 666
     timeout: 7
     environment:
