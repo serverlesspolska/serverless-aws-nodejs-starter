@@ -24,11 +24,11 @@ sls invoke local -f sampleTwo
 ## Deployment
 
 ```
-sls deploy -t dev
+sls deploy -s dev
 ```
 or 
 ```
-sls deploy -t prod
+sls deploy -s prod
 ```
 
 # What's included
