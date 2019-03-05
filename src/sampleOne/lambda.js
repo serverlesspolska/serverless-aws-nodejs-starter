@@ -1,6 +1,6 @@
 const helper = require('./helper')
 
-module.exports.main = (event, context, callback) => {
+module.exports.main = async (event, context) => {
   const response = { message: helper('World') };
-  callback(null, response)
+  return response
 }

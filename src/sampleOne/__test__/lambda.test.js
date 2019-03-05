@@ -1,13 +1,17 @@
+/**
+ * @jest-environment node
+ */
+
 const LambdaTester = require('lambda-tester');
-const handler = require('../fnSampleOne').main
+const handler = require('../lambda').main
 
 describe('Lambda function One', () => {
   it('should work', () => {
     const event = {}
     return LambdaTester(handler)
       .event(event)
-      .expectResult((r) => {
-        expect(r.message).toBe('Hello World!')
+      .expectResolve((actual) => {
+        expect(actual.message).toBe('Hello World!')
       })
   })
 })
