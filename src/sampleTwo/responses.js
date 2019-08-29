@@ -12,7 +12,7 @@ module.exports = {
     headers: responseHeaders,
     body: JSON.stringify(data)
   }),
-  error: error => ({
+  error: (error) => ({
     statusCode: error.code,
     headers: responseHeaders,
     body: JSON.stringify(error)
