@@ -18,14 +18,14 @@ custom:
 
 functions:
   sampleOne:
-    handler: src/sampleOne/fnSampleOne.main
+    handler: src/sampleOne/lambda.main
     description: Function One description
     memorySize: 128
     timeout: 5
     environment:
       FOO: BAR
   sampleTwo:
-    handler: src/sampleTwo/fnSampleTwo.main
+    handler: src/sampleTwo/lambda.main
     description: Function Two description
     memorySize: 666
     timeout: 7
