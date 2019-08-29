@@ -6,7 +6,7 @@ A bootstrap project with a set of preconfigured libraries so you can start faste
 ## Install
 
 ```
-sls install --url https://github.com/panzupa/serverless-aws-nodejs-starter --name my-project
+sls install --url https://github.com/serverlesspolska/serverless-aws-nodejs-starter --name my-project
 ```
 ```
 npm i
