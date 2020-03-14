@@ -3,7 +3,7 @@ service: serverless-aws-nodejs-starter
 provider:
   name: aws
   stage: dev
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   profile: ${self:custom.myProfile.${self:custom.myStage}}
   region: ${self:custom.myRegion.${self:custom.myStage}}
 
