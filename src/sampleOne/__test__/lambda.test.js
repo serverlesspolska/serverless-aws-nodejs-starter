@@ -3,7 +3,7 @@
  */
 
 const LambdaTester = require('lambda-tester');
-const handler = require('../lambda').main
+const { handler } = require('../lambda')
 
 describe('Lambda function One', () => {
   it('should work', () => {
